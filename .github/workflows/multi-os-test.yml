@@ -23,21 +23,21 @@ jobs:
 
       - name: Print completion message
         run: echo "Ubuntu tests completed"
-      
-    test-windows:
-      runs-on: windows-latest
-      steps:
-        - name: Print start message
-          run: echo "Testing on Windows..."
 
-        - name: Show OS information
-          run: systeminfo | findstr /B /C:"OS"
+  test-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Print start message
+        run: echo "Testing on Windows..."
 
-        - name: Create test file
-          run: echo Windows test by Jack MacKay > test-windows.txt
+      - name: Show OS information
+        run: systeminfo | findstr /B /C:"OS"
 
-        - name: Display file contents
-          run: type test-windows.txt
+      - name: Create test file
+        run: echo Windows test by Jack MacKay > test-windows.txt
 
-        - name: Print completion message
-          run: echo "Windows tests completed"
+      - name: Display file contents
+        run: type test-windows.txt
+
+      - name: Print completion message
+        run: echo "Windows tests completed"
